@@ -1,0 +1,324 @@
+{
+    "featureList": [
+        {
+            "id":"0",
+            "buildIn":false,
+            "needPro":false,
+            "isOpend":true,
+            "menuItemOfSetting":"",
+            "featureName":"Unity 游戏云",
+            "featureDescribe":"一站式联网游戏服务，帮助玩家轻松打造联网游戏",
+            "featureShortDoc":"为广大开发者提供高性能和可扩展功能模块，帮助大家轻松打造各类联网游戏。",
+            "remoteFeatureImage":"2019.3.15/ChinaFeature.ConnectedGame.png",
+            "netpageButton":"详情页面：<color=#29b5c4ff>http://unity.cn/ucg</color>",
+            "documentURL":"https://unity.cn/ucg",
+            "supportedTargets":"All Platforms",
+            "subFeatures":[
+                {
+                    "id":"1",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"云端资源分发",
+                    "featureNameEn":"Cloud Content Delivery",
+                    "featureDescribe":"助你轻松打造在线资源更新系统",
+                    "featureShortDoc":"Unity最新的云端资源分发服务，结合革新性的Addressable Assets 资源管理系统将帮助开发者打造顺畅且策略灵活的资源更新系统。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.CloudContentDelively.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"com.unity.cloudcontentdelivery",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>Developer portal</color>",
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>教程</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>示例项目</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/cloud-content-delivery",
+                        "https://developer.cloud.unity.cn/cloud-content-delivery/",
+                        "https://unity-1258948065.cos.ap-shanghai.myqcloud.com/AssetStreaming/CloudContentDeliveryUserManual.pdf",
+                        "https://unity-1258948065.cos.ap-shanghai.myqcloud.com/AssetStreaming/CloudContentDelivery.mp4",
+                        "https://unity.cn/messages/w/05a748aedac0c000/c/0820e4cac1c07000",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/KartGame.zip",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                },
+                {
+                    "id":"2",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"用户认证",
+                    "featureNameEn":"Player ID",
+                    "featureDescribe":"集成多种认证方式的用户认证系统",
+                    "featureShortDoc":"1.多种登录方式：匿名登录、邮箱密码登录、手机号码登录、微信登录（Android/iOS手机）\n2.Unity Editor中跨多个平台配置身份,将开发时间从几周减少到几天",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.PlayerID.png",
+                    "documentURL":"",
+                    "supportedTargets":"Android,iOS",
+                    "packageId":"com.unity.playerid-cn",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>教程</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>示例项目</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://github.com/Unity-Technologies/cn-playerid-docs/tree/master/playerid%20doc",
+                        "https://unity-1258948065.cos.ap-shanghai.myqcloud.com/AssetStreaming/Player%20Identity.MP4",
+                        "https://connect.unity.cn/messages/w/05a748aedac0c000/c/07aa6d776c403000",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/KartGame.zip",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                },
+                {
+                    "id":"3",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"云存储",
+                    "featureNameEn":"Cloud Save",
+                    "featureDescribe":"便捷管理，保存玩家的游戏状态数据",
+                    "featureShortDoc":"1.便捷管理，保存玩家的游戏状态数据\n2.跨多设备同步游戏状态\n3.自动检测同步冲突",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.CloudSave.png",
+                    "documentURL":"",
+                    "supportedTargets":"Android,iOS",
+                    "packageId":"com.unity.cloudsave",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>教程</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>示例项目</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://github.com/Unity-Technologies/cn-playerid-docs/tree/master/cloudsave%20doc",
+                        "https://unity-1258948065.cos.ap-shanghai.myqcloud.com/AssetStreaming/CloudSave.mp4",
+                        "https://connect.unity.cn/messages/w/05a748aedac0c000/c/07aa6d776c403000",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/KartGame.zip",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                },
+                {
+                    "id":"4",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"云开发",
+                    "featureNameEn":"",
+                    "featureDescribe":"在Unity中直接开发云端功能",
+                    "featureShortDoc":"为开发者们提供的无服务器执行环境，帮助您在无需购买和管理服务器的情况下运行代码。您只需使用平台支持的语言编写核心代码并设置代码运行的条件，即可在云基础设施上弹性、安全地运行代码。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.YunHanShu.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"com.unity.cloudbase",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/tcb",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/Unity%20CloudBase%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.pdf",
+                        "https://unity.cn/messages/w/05a748aedac0c000/c/0820e4cac1c07000",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                },
+                {
+                    "id":"5",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"服务器托管",
+                    "featureNameEn":"Multiplay",
+                    "featureDescribe":"全球顶级专业服务器托管服务",
+                    "featureShortDoc":"由全球游戏领域资深团队诚意打造的专业游戏托管服务，让您的游戏上线和运营从此高枕无忧。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.Multiplay.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"",
+                    "packageInstallTip":"",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/multiplay",
+                        "https://unity.cn/multiplay/contact"
+                    ]
+                },
+                {
+                    "id":"6",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"玩家匹配",
+                    "featureNameEn":"Matchmaking",
+                    "featureDescribe":"高效稳定的玩家匹配服务",
+                    "featureShortDoc":"灵活匹配，动态连接，快速扩展。精准匹配托管服务支持自定义匹配逻辑，与游戏扩展服务相结合，让玩家每一局游戏都匹配到合适的对手/队友，获得最佳游戏体验。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.Matchmaking.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"",
+                    "packageInstallTip":"",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/multiplay",
+                        "https://unity.cn/multiplay/contact"
+                    ]
+                },
+                {
+                    "id":"7",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"游戏内通讯",
+                    "featureNameEn":"Vivox",
+                    "featureDescribe":"全球顶级游戏内通讯服务",
+                    "featureShortDoc":"支持语音和文本聊天。 以插件方式轻松集成，并可以与任何引擎或平台一起使用。 已被很多大型多人游戏所采用。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.Vivox.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/vivox",
+                        "https://unity.cn/multiplay/contact"
+                    ]
+                },
+                {
+                    "id":"8",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"联机对战引擎",
+                    "featureNameEn":"MGOBE",
+                    "featureDescribe":"实时、弹性扩容的高性能联机对战服务",
+                    "featureShortDoc":"实时、弹性扩容的高性能联机对战服务，快速构建 Unity 多人游戏，腾讯云平台赋能。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.MGOBE.png",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "packageId":"com.unity.mgobe",
+                    "packageInstallTip":"（或在Package Manager中安装）",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>示例项目</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/mgobe",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/MGOBE%20%E8%81%94%E6%9C%BA%E5%AF%B9%E6%88%98%E5%BC%95%E6%93%8E%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.pdf",
+                        "https://unity.cn/messages/w/05a748aedac0c000/c/0820e4cac1c07000",
+                        "https://mgobe-unity-1300678507.cos.ap-shanghai.myqcloud.com/KartGame.zip",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                },
+                {
+                    "id":"9",
+                    "buildIn":false,
+                    "needPro":false,
+                    "isOpend":true,
+                    "menuItemOfSetting":"",
+                    "featureName":"云构建",
+                    "featureNameEn":"Cloud Build",
+                    "featureDescribe":"便捷的云端构建及分发服务",
+                    "featureShortDoc":"您可以在Editor中将项目从本地上传至云端，或提供项目仓库信息，通过微信小程序监控云端构建进度，构建完成后分发包体给其他用户。",
+                    "remoteFeatureImage":"2019.3.15/ChinaFeature.CloudBuild.png",
+                    "packageId":"",
+                    "packageInstallTip":"",
+                    "documentURL":"",
+                    "supportedTargets":"All Platforms",
+                    "linkButtonArray":[
+                        "<color=#29b5c4ff>详情页面</color>",
+                        "<color=#29b5c4ff>用户手册</color>",
+                        "<color=#29b5c4ff>讨论组</color>",
+                        "<color=#29b5c4ff>联系我们</color>"
+                    ],
+                    "linkUrlArray":[
+                        "https://unity.cn/ccb",
+                        "https://unity-1258948065.cos.ap-shanghai.myqcloud.com/ucb-manual-china.pdf",
+                        "https://connect.unity.com/g/uprzhuan-qu?_ga=2.46036324.1518748061.1591429449-1527944287.1588869003",
+                        "https://unity.cn/ucg/contact"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"1",
+            "buildIn":false,
+            "needPro":false,
+            "isOpend":true,
+            "menuItemOfSetting":"",
+            "featureName":"Anti-Cheat Expert",
+            "featureDescribe":"代码与数据加密工具",
+            "featureShortDoc":"由Anti-Cheat Expert团队与Unity中国技术支持团队联合开发。\n它针对Unity-Mono、Unity-IL2CPP运行时提供加密保护服务。同时提供文件级、方法级、指令级等多种等级的加密方式。\n\n使用方法：\n通过Project Settings > Player > Security Settings，将Enable Security Build启用，即可在编译时自动接入安全方案。\n\nAnti-Cheat Expert团队是全球领先游戏安全方案与服务提供者。\n致力于为端游、手游、主机等全平台游戏中的防破解、反作弊等各类游戏安全问题，提供全面和专业的解决方案。",
+            "remoteFeatureImage":"2019.3.15/ChinaFeature.Tencent.png",
+            "documentURL":"",
+            "supportedTargets":"Android,iOS"
+        },
+        {
+            "id":"2",
+            "buildIn":false,
+            "needPro":false,
+            "isOpend":true,
+            "menuItemOfSetting":"",
+            "featureName":"AssetBundle加密",
+            "featureDescribe":"基于ChunkBased的AssetBundle加密功能",
+            "featureShortDoc":"Unity中国团队推出了Unity AssetBundle加密方案。\n\n提供基于ChunkBased的AssetBundle加密功能，使AssetBundle更加安全。\n\n加密方案基于AES对称加密和自定义加密，提高破解难度同时将性能影响降到最低。\n\n（注：目前AssetBundle加密需要AssetBundle为ChunkBased压缩格式。后续会推出支持lzma和非压缩格式的加密。）",
+            "remoteFeatureImage":"2019.3.15/ChinaFeature.AssetBundle.png",
+            "documentURL":"https://connect.unity.com/p/unityzeng-qiang-ban-gong-neng-assetbundlejia-mi-shuo-ming-wen-dang",
+            "supportedTargets":"All Platforms"
+        },
+        {
+            "id":"3",
+            "buildIn":false,
+            "needPro":false,
+            "isOpend":true,
+            "menuItemOfSetting":"",
+            "featureName":"Crash Report",
+            "featureDescribe":"崩溃与异常收集工具",
+            "featureShortDoc":"崩溃与异常收集工具可以收集程序在崩溃时的异常数据，以此来改进和优化您的程序。请在Editor->Services->Cloud Diagnostics页面查看相关配置。\n收集的崩溃报告可以在https://developer.cloud.unity.cn/diagnostics/orgs/<org_name>/projects/<project_name>/crashes中查看。",
+            "remoteFeatureImage":"2019.3.15/ChinaFeature.CrashReporter.png",
+            "documentURL":"https://developer.cloud.unity.cn",
+            "supportedTargets":"Android,iOS,Linux,Mac,PC,WebGL,Windows 8 Universal,Windows 10 Universal"
+        },
+        {
+            "id":"4",
+            "buildIn":false,
+            "needPro":false,
+            "isOpend":true,
+            "menuItemOfSetting":"",
+            "featureName":"Shader Profiler",
+            "featureDescribe":"检查Shader在内存中的运行状态",
+            "featureShortDoc":"Shader Profiler用于检查Shader在内存中的运行状态，\n能够帮助开发者实时检查所用Shader是否正确。\n\nShader Profiler主要可以查看：\n1.Subshader信息\n2.Pass信息\n3.Variant信息\n4.Variant是否已经预热\n\n可以导入/导出相关测试信息。\n\n请打开顶部菜单Window->Package Manager窗口下载安装。\n通过Window->Analysis->Shader Profiler启动窗口。",
+            "remoteFeatureImage":"2019.3.4/ChinaFeature.ShaderProfiler.png",
+            "documentURL":"",
+            "supportedTargets":"All Platforms"
+        }
+    ]
+}
