@@ -31,7 +31,9 @@ clip.SampleAnimation(gameObject, i / clip.frameRate);
 Matrix4x4 matrix = skinnedMeshRenderer.transform.worldToLocalMatrix * bones[j].localToWorldMatrix *
 bindPoses[j];
 ```
-
+骨骼变换的原来如下图：
+  
+![spaceTransform](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/imgs/space.jpg)
 
 获得矩阵信息后，将其渲染成Texture2D。为了保持精度，可以通过EncodeFloatRGBA函数将每一个float值转为RGBA空间上的一个点，然后将其逐一渲染到Texture2D上面来,渲染出的图片：
   
