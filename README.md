@@ -1,4 +1,4 @@
-#GPU-Skinning-Demo  
+# GPU-Skinning-Demo  
   
 一种利用GPU来实现角色动画效果，减少CPU蒙皮开销的技术实现
 - - -
