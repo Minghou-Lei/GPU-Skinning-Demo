@@ -14,18 +14,6 @@ struct VertexInfo{
 	public Vector3 normal;
 }
 
-public enum UVChannel
-{
-	UV1,
-	UV2,
-	UV3,
-	UV4,
-	UV5,
-	UV6,
-	UV7,
-	UV8,
-}
-
 public class AnimationTextureBaker : MonoBehaviour{
 	public Button button;
 	public ComputeShader computeShader;

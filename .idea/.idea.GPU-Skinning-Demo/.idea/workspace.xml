@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/AnimationTextureBaker.cs" />
+      <option value="$PROJECT_DIR$/README.md" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1pVn6IlcF7H7y0PuvXd5p1T4J6R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="" />
+      <created>1615276953584</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615276953584</updated>
+      <workItem from="1615276953585" duration="50000" />
+      <workItem from="1615277071098" duration="650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

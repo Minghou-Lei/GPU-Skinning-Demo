@@ -29606,7 +29606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &768793189
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47939,7 +47939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1224757059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47986,7 +47986,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224757058}
-  m_Mesh: {fileID: 4300000, guid: 8c64f8c740a40f649a3ab97880de3a46, type: 2}
+  m_Mesh: {fileID: 4300000, guid: e92b5f2f0d0f5dc408b44da3d28fd46d, type: 2}
 --- !u!4 &1224757061
 Transform:
   m_ObjectHideFlags: 0
@@ -79759,6 +79759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: castle_guard_02@Breakdance Uprock Var 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88d4661628956c64fb6e8ff6bcd42bc9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 88d4661628956c64fb6e8ff6bcd42bc9,
         type: 3}
