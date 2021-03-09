@@ -137,8 +137,7 @@ public class AnimationBoneBaker : MonoBehaviour
             // 写入变换后的矩阵
             for (var j = 0; j < bonesCount; j++)
             {
-                Matrix4x4 matrix = skinnedMeshRenderer.transform.worldToLocalMatrix * bones[j].localToWorldMatrix *
-                             bindPoses[j];
+                Matrix4x4 matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
                 //Debug.Log(matrix.ToString());
                 //Matrix4x4 matrix = bones[j].localToWorldMatrix * bindPoses[j];
 

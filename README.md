@@ -27,10 +27,11 @@ CPU的这两大开销限制了我们使用传统方式渲染大规模角色的�
 //采样当前帧
 clip.SampleAnimation(gameObject, i / clip.frameRate);
 
-//骨骼节点的在世界坐标下的变化信息
+//模型空间-骨骼空间-世界空间-模型空间
 Matrix4x4 matrix = skinnedMeshRenderer.transform.worldToLocalMatrix * bones[j].localToWorldMatrix *
 bindPoses[j];
 ```
+
 
 获得矩阵信息后，将其渲染成Texture2D。为了保持精度，可以通过EncodeFloatRGBA函数将每一个float值转为RGBA空间上的一个点，然后将其逐一渲染到Texture2D上面来,渲染出的图片：
   
@@ -39,5 +40,18 @@ bindPoses[j];
 每一帧每一块骨骼将会被取样12次，作为12个Pixel储存在材质中。
 
 ## 2.添加骨骼索引信息与权重信息到Mesh的UV通道 : [MappingBoneIndexAndWeightToMeshUV](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Scripts/AnimationBoneBaker.cs#L181)
+
+虽然我们有了每帧每骨骼的变换信息，但是还有一点，就是一个顶点受哪些骨骼的影响及其程度如何，还没有实现。但是仔细一想就明白，这个索引跟权重是一个Mesh静态的数据。
+
+既然是Mesh静态的，那就直接写到Mesh里，最常见的当然就是UV通道了。UV是一个Vector2的向量，因此一次只能存一对权重索引数据。如果你对精度提出了更高的要求，那可以用2个UV通道或者4个UV通道。
+  
+```c#
+//深拷贝一个原来的Mesh
+var bakedMesh = new Mesh();
+bakedMesh = Instantiate(mesh);
+
+//为新的Mesh的UV2、UV3通道添加骨骼信息和
+MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
+```
 
 ## 3.将蒙皮所需信息在Shader中合并（代替原来的CPU蒙皮） : [BoneAnimationShader](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Shaders/BoneAnimationShader.shader)
