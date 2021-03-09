@@ -1,4 +1,5 @@
-#GPU-Skinning-Demo
+#GPU-Skinning-Demo  
+  
 一种利用GPU来实现角色动画效果，减少CPU蒙皮开销的技术实现
 - - -
 
@@ -11,5 +12,18 @@
 CPU的这两大开销限制了我们使用传统方式渲染大规模角色的可能性，主要瓶颈是角色动画的处理都集中在CPU端。瓶颈之二是CPU和GPU之间的Draw Call问题，如果利用批处理（包括Static Batching和Dynamic Batching）或是从Unity5.4之后引入的GPU Instancing就可以解决这个问题。但是，不幸的是这两种技术都不支持动画角色的SkinnedMeshRender。
 
 那么解决方案就呼之欲出了，那就是将动画相关的内容从CPU转移到GPU，同时由于CPU不需要再处理动画的逻辑了，因此CPU不仅省去了这部分的开销而且SkinnedMeshRender也可以替换成一般的Mesh Render，我们就可以很开心的使用GPU Instancing来减少Draw Call了。
+- - - 
+  
+由于目标是去掉SkinnedMeshRender，它的作用是蒙皮； 蒙皮需要的关键信息:
+- 每个顶点的关联骨骼信息(Bone Index与Bone Weight)
+- 每帧骨骼的变换信息（每帧每个骨骼的Matrix4X4矩阵）
+  
+因此就要想方法将这两种信息传入GPU，通过GPU来计算骨骼并进行蒙皮。以下是简单的步骤说明；
 
-## 1.渲染骨骼动画到材质
+## 1.渲染骨骼矩阵到材质 : [CreateBoneTex](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Scripts/AnimationBoneBaker.cs#L111)
+  
+
+
+## 2.添加骨骼索引信息与权重信息到Mesh的UV通道 : [MappingBoneIndexAndWeightToMeshUV](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Scripts/AnimationBoneBaker.cs#L181)
+
+## 3.将蒙皮所需信息在Shader中合并（代替原来的CPU蒙皮） : [BoneAnimationShader](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Shaders/BoneAnimationShader.shader)

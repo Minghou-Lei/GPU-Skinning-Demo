@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.BoneMatrix.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5b/5b3ffad645245f41a82787d83d8b3023" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/88/88d3551dc6560adea2cd1f4f37ed6c75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8b/8b2f0578db8f6a0d9cce9a3afb61f5e5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +68,7 @@
       <updated>1615276953584</updated>
       <workItem from="1615276953585" duration="50000" />
       <workItem from="1615277071098" duration="650000" />
+      <workItem from="1615277826010" duration="963000" />
     </task>
     <servers />
   </component>
