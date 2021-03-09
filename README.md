@@ -36,9 +36,7 @@ bindPoses[j];
   
 ![BoneMatrix2Texture2D](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Ch36_nonPBR%40Dancing%20Running%20Man.Dancing%20Running%20Man.BoneMatrix.jpg "BoneMatrix2Texture2D")
   
-
-
-
+每一帧每一块骨骼将会被取样12次，作为12个Pixel储存在材质中。
 
 ## 2.添加骨骼索引信息与权重信息到Mesh的UV通道 : [MappingBoneIndexAndWeightToMeshUV](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Scripts/AnimationBoneBaker.cs#L181)
 
