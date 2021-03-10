@@ -31,7 +31,7 @@ clip.SampleAnimation(gameObject, i / clip.frameRate);
 Matrix4x4 matrix = skinnedMeshRenderer.transform.worldToLocalMatrix * bones[j].localToWorldMatrix *
 bindPoses[j];
 ```
-骨骼变换的原来如下图：
+骨骼变换的原理如下图：
   
 ![spaceTransform](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/imgs/space.jpg)
 
@@ -52,7 +52,7 @@ bindPoses[j];
 var bakedMesh = new Mesh();
 bakedMesh = Instantiate(mesh);
 
-//为新的Mesh的UV2、UV3通道添加骨骼信息和
+//为新的Mesh的UV2、UV3通道添加骨骼信息和权重信息
 MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
 ```
 
