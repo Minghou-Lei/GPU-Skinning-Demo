@@ -90,6 +90,9 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.AssetBundleBrowser.Editor">
+ <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
@@ -107,9 +110,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.AssetBundleBrowser.Editor">
- <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

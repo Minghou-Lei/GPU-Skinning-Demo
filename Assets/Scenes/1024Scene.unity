@@ -62772,8 +62772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff83594becd8d942894fb9eb05f945b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  row: 10
-  column: 2
+  row: 32
+  column: 32
   bakedMesh: {fileID: 4300000, guid: e92b5f2f0d0f5dc408b44da3d28fd46d, type: 2}
   bakedMaterial: {fileID: 2100000, guid: e4b19659bf5060148b75b67ad9e58372, type: 2}
 --- !u!4 &1713673756
