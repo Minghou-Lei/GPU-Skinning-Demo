@@ -58,8 +58,9 @@ MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
 
 ## 3.将蒙皮所需信息在Shader中合并（代替原来的CPU蒙皮） : [BoneAnimationShader](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Shaders/BoneAnimationShader.shader)
   
-在Shader中逐像素解码之前烘焙的BoneMartix材质，获得每帧每骨骼的变换矩阵：
+在Shader中逐像素解码之前烘焙的BoneMartix材质，当前顶点受那两个骨骼影响，提取并组装出他俩的矩阵信息：
 ```cg
+//查找一号骨骼在BoneMatrix2Texture2D中的位置
 float total = (y * _BoneCount + (int)(index.x)) * 12;
 float4 line0 = readInBoneTex(total);
 float4 line1 = readInBoneTex(total + 4);
@@ -68,6 +69,7 @@ float4 line2 = readInBoneTex(total + 8);
 //得到影响该顶点的一号骨骼的Matrix4X4变换矩阵
 float4x4 mat1 = float4x4(line0, line1, line2, float4(0, 0, 0, 1));
 
+//查找二号骨骼在BoneMatrix2Texture2D中的位置
 total = (y * _BoneCount + (int)(index.y)) * 12;
 line0 = readInBoneTex(total);
 line1 = readInBoneTex(total + 4);
