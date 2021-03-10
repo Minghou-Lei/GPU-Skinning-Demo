@@ -1059,27 +1059,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485093841}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 784414f1d2ca2684882cbe4dff68459f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  computeShader: {fileID: 7200000, guid: ca56ad8841695b14898b10bbbbb1aa85, type: 3}
---- !u!114 &1485093843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485093841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e2b9b021acce124fbb8b19819749306, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b82884baf804ebfb2a280b250a7ff0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  Bakemode: 0
+  outW: 2
+  outI: 1
   mesh: {fileID: -3702037217650275473, guid: 845d01437fa45f044836469759ec7e83, type: 3}
+  computeShader: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &1915152601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88d4661628956c64fb6e8ff6bcd42bc9,

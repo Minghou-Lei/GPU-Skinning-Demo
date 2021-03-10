@@ -23,6 +23,8 @@
 				#pragma fragment frag
 				#pragma multi_compile _WEIGHTUV_UV2 _WEIGHTUV_UV3
 				#pragma multi_compile _INDEXUV_UV2 _INDEXUV_UV3
+				#pragma multi_compile_instancing
+
 
 				#undef BONE_INPUT_WEIGHT_UV
 				#if _WEIGHTUV_UV2
@@ -61,9 +63,6 @@
 					float4 uv_n_uv :TEXCOORD5;
 					UNITY_VERTEX_INPUT_INSTANCE_ID
 				};
-
-				UNITY_INSTANCING_BUFFER_START(Props)
-				UNITY_INSTANCING_BUFFER_END(Props)
 
 				sampler2D _MainTex;
 				float4 _MainTex_ST;

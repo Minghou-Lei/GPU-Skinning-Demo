@@ -46,38 +46,9 @@ public class AnimationBoneBaker : MonoBehaviour
         foreach (var clip in clips)
         {
             var frameCount = (int) (clip.length * clip.frameRate);
-            var matrixs = new List<Matrix4x4>();
-            /*
-            RenderTexture matrixsTexture = new RenderTexture(
-                textWidth,
-                frameCount,
-                0,
-                RenderTextureFormat.ARGBHalf
-            );
-
-            matrixsTexture.name = string.Format("{0}.{1}.BoneMatrix", name, clip.name);
-
-            matrixsTexture.enableRandomWrite = true;
-            matrixsTexture.Create();
-            RenderTexture.active = matrixsTexture;
-            GL.Clear(true, true, Color.clear);
-            */
+          
             yield return 0;
 
-            /*
-            for (int i = 0; i < frameCount; ++i)
-            {
-                animator.Play(clip.name, 0, (float) i / frameCount);
-                yield return 0;
-                
-                Transform[] bones = skin.bones;
-                foreach (var bone in bones)
-                {
-                    Matrix4x4 add = Matrix4x4.TRS(bone.position,bone.rotation.normalized,Vector3.one);
-                    matrixs.Add(add);
-                }
-            }
-            */
             var boneTex = CreateBoneTex(animator, skin, clip, mesh, 512, frameCount);
             Debug.Log("BoneCount:" + boneCount + "\tFrameCount:" + frameCount + "\tFrameRate:" + clip.frameRate);
 

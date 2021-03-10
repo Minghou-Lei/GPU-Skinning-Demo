@@ -60,6 +60,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AnimationBoneBaker.cs" />
      <Compile Include="Assets\Scripts\AnimationTextureBaker.cs" />
+     <Compile Include="Assets\Scripts\Baker.cs" />
+     <Compile Include="Assets\Scripts\PropInspector.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <None Include="Assets\Shaders\VertexAnimationShader.shader" />
      <None Include="Assets\Shaders\BoneAnimationShader.shader" />
      <None Include="Assets\Shaders\MeshInfoTextureBaker.compute" />
@@ -104,6 +107,9 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.AssetBundleBrowser.Editor">
+ <HintPath>D:/GPU-Skinning-Demo/GPU-Skinning-Demo/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

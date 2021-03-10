@@ -9,6 +9,9 @@
         <e p="Scripts" t="Include">
           <e p="AnimationBoneBaker.cs" t="Include" />
           <e p="AnimationTextureBaker.cs" t="Include" />
+          <e p="Baker.cs" t="Include" />
+          <e p="PropInspector.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="BoneAnimationShader.shader" t="Include" />
