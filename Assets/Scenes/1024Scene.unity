@@ -52890,8 +52890,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -52914,13 +52914,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419543061}
-  m_LocalRotation: {x: -0.17051062, y: -0.3839476, z: 0.07237247, w: -0.90458417}
-  m_LocalPosition: {x: -1.025694, y: 2.9342113, z: -0.80664235}
+  m_LocalRotation: {x: 0.707107, y: -0.00000003655441, z: 0.000000022992026, w: 0.70710665}
+  m_LocalPosition: {x: 14.892869, y: 30.923447, z: 15.479412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 66.541, y: 179.496, z: 0.011000001}
 --- !u!4 &1420142729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2104684870757259275, guid: 6136d7154eff79243a78ced976a33b77,
@@ -62772,10 +62772,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff83594becd8d942894fb9eb05f945b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  row: 64
-  column: 64
-  bakedMesh: {fileID: 4300000, guid: e92b5f2f0d0f5dc408b44da3d28fd46d, type: 2}
-  bakedMaterial: {fileID: 2100000, guid: e4b19659bf5060148b75b67ad9e58372, type: 2}
+  row: 32
+  column: 32
+  bakedMesh: {fileID: 4300000, guid: 3657340c2a1121041aea1fb3b9d0a824, type: 2}
+  bakedMaterial: {fileID: 2100000, guid: c52521d8efc58d4459114482184d2348, type: 2}
+  materials:
+  - {fileID: 2100000, guid: e4b19659bf5060148b75b67ad9e58372, type: 2}
+  - {fileID: 2100000, guid: c52521d8efc58d4459114482184d2348, type: 2}
 --- !u!4 &1713673756
 Transform:
   m_ObjectHideFlags: 0
