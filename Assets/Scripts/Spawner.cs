@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    
     public int row;
     public int column;
     public Mesh bakedMesh;
     public Material bakedMaterial;
-    private GameObject spawn;
     private MaterialPropertyBlock mpb;
+    private GameObject spawn;
 
     private void Awake()
     {
         spawn = new GameObject();
         spawn.name = "spawned";
         spawn.transform.parent = transform;
-        
+
         spawn.AddComponent<MeshFilter>().sharedMesh = bakedMesh;
         spawn.AddComponent<MeshRenderer>().material = bakedMaterial;
 
@@ -27,17 +23,19 @@ public class Spawner : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        for (int r = 0; r < row; r++)
+        for (var r = 0; r < row; r++)
+        for (var c = 0; c < column; c++)
         {
-            for (int c = 0; c < column; c++)
-            {
-                GameObject rc = Instantiate(spawn);
-                rc.transform.parent = transform;
-                rc.transform.position += new Vector3(r, 0, c);
-
-            }
+            var rc = Instantiate(spawn);
+            var mpb = new MaterialPropertyBlock();
+            rc.transform.parent = transform;
+            rc.transform.position += new Vector3(r, 0, c);
+            //rc.GetComponent<MeshRenderer>().material.SetFloat("_Random",Random.Range(0f,1f));
+            rc.GetComponent<MeshRenderer>().GetPropertyBlock(mpb);
+            mpb.SetFloat("_Offset", Random.Range(0f, 1f));
+            rc.GetComponent<MeshRenderer>().SetPropertyBlock(mpb);
         }
     }
 }

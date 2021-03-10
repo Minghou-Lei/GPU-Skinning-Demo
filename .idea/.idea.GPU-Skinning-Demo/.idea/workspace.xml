@@ -3,10 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/imgs/SpaceTransform.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imgs/SpaceTransform.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ch36_nonPBR@Dancing Running Man.Dancing Running Man.mesh.mesh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/Charactor/Ch36_nonPBR@Dancing Running Man.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Charactor/Ch36_nonPBR@Dancing Running Man.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1024Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1024Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationBoneBaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationBoneBaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationTextureBaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationTextureBaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Baker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Baker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/BoneAnimationShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/BoneAnimationShader.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/73/73cf5a8faf364f238081db6d4e862dd5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9a/9a02789ca24bf5960b28b7a33f08b936" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fd/fd7283a2c2d8da63c81317cfa79952b0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +57,11 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/AnimationTextureBaker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AnimationBoneBaker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Baker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Shaders/BoneAnimationShader.shader" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PropInspector.cs" />
       <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/Assets/Shaders/BoneAnimationShader.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PropInspector.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pVn6IlcF7H7y0PuvXd5p1T4J6R" />
@@ -89,7 +114,7 @@
       <workItem from="1615276953585" duration="50000" />
       <workItem from="1615277071098" duration="650000" />
       <workItem from="1615277826010" duration="19522000" />
-      <workItem from="1615353933158" duration="3990000" />
+      <workItem from="1615353933158" duration="7471000" />
     </task>
     <servers />
   </component>

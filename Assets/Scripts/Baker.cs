@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,30 +39,21 @@ public class Baker : MonoBehaviour
         button.onClick.AddListener(onClick);
     }
 
-    void onClick()
+    private void onClick()
     {
         if (Bakemode == BAKEMODE.bone)
         {
-            if (mesh == null)
-            {
-                throw new Exception("请添加Mesh");
-            }
+            if (mesh == null) throw new Exception("请添加Mesh");
 
-            if (outI == outW)
-            {
-                throw new Exception("频道冲突，请重选");
-            }
+            if (outI == outW) throw new Exception("频道冲突，请重选");
 
             BakeBoneTexture();
         }
 
-        if (Bakemode == BAKEMODE.vertex)
-        {
-            StartCoroutine(BakeVertexTexture());
-        }
+        if (Bakemode == BAKEMODE.vertex) StartCoroutine(BakeVertexTexture());
     }
 
-    void BakeBoneTexture()
+    private void BakeBoneTexture()
     {
         var animator = GetComponent<Animator>();
         var clips = animator.runtimeAnimatorController.animationClips;
@@ -92,31 +84,31 @@ public class Baker : MonoBehaviour
         }
     }
 
-    IEnumerator BakeVertexTexture()
+    private IEnumerator BakeVertexTexture()
     {
-        Animator animator = GetComponent<Animator>();
-        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
-        SkinnedMeshRenderer skin = GetComponentInChildren<SkinnedMeshRenderer>();
-        int vertCount = skin.sharedMesh.vertexCount;
+        var animator = GetComponent<Animator>();
+        var clips = animator.runtimeAnimatorController.animationClips;
+        var skin = GetComponentInChildren<SkinnedMeshRenderer>();
+        var vertCount = skin.sharedMesh.vertexCount;
 
-        Mesh mesh = new Mesh();
+        var mesh = new Mesh();
         animator.speed = 1;
-        int textWidth = vertCount;
+        var textWidth = vertCount;
         foreach (var clip in clips)
         {
-            int frameCount = (int) (clip.length * clip.frameRate);
+            var frameCount = (int) (clip.length * clip.frameRate);
             Debug.Log("Frames:" + clip.length * clip.frameRate);
-            List<VertexInfo> vertexs = new List<VertexInfo>();
+            var vertexs = new List<VertexInfo>();
 
-            RenderTexture positionRenderTexture =
+            var positionRenderTexture =
                 new RenderTexture(textWidth, frameCount, 0, RenderTextureFormat.ARGBHalf);
-            RenderTexture normalRenderTexture =
+            var normalRenderTexture =
                 new RenderTexture(textWidth, frameCount, 0, RenderTextureFormat.ARGBHalf);
 
             positionRenderTexture.name = string.Format("{0}.{1}.position", name, clip.name);
             normalRenderTexture.name = string.Format("{0}.{1}.normal", name, clip.name);
 
-            foreach (RenderTexture renderTexture in new[] {positionRenderTexture, normalRenderTexture})
+            foreach (var renderTexture in new[] {positionRenderTexture, normalRenderTexture})
             {
                 renderTexture.enableRandomWrite = true;
                 renderTexture.Create();
@@ -127,23 +119,23 @@ public class Baker : MonoBehaviour
             animator.Play(clip.name);
             yield return 0;
 
-            for (int i = 0; i < frameCount; ++i)
+            for (var i = 0; i < frameCount; ++i)
             {
                 animator.Play(clip.name, 0, (float) i / frameCount);
                 yield return 0;
                 skin.BakeMesh(mesh);
-                vertexs.AddRange(Enumerable.Range(0, vertCount).Select(idx => new VertexInfo()
+                vertexs.AddRange(Enumerable.Range(0, vertCount).Select(idx => new VertexInfo
                 {
                     position = mesh.vertices[idx],
                     normal = mesh.normals[idx]
                 }));
             }
 
-            ComputeBuffer buffer = new ComputeBuffer(vertexs.Count,
-                System.Runtime.InteropServices.Marshal.SizeOf(typeof(VertexInfo)));
+            var buffer = new ComputeBuffer(vertexs.Count,
+                Marshal.SizeOf(typeof(VertexInfo)));
             buffer.SetData(vertexs);
 
-            int kernelID = computeShader.FindKernel("CSMain");
+            var kernelID = computeShader.FindKernel("CSMain");
 
             computeShader.SetInt("vertCount", vertCount);
             computeShader.SetBuffer(kernelID, "meshInfo", buffer);
@@ -155,8 +147,8 @@ public class Baker : MonoBehaviour
 
 #if UNITY_EDITOR
 
-            Texture2D pt = Convert(positionRenderTexture);
-            Texture2D nt = Convert(normalRenderTexture);
+            var pt = Convert(positionRenderTexture);
+            var nt = Convert(normalRenderTexture);
 
             Graphics.CopyTexture(positionRenderTexture, pt);
             Graphics.CopyTexture(normalRenderTexture, nt);
@@ -189,7 +181,7 @@ public class Baker : MonoBehaviour
 
     public static Texture2D Convert(RenderTexture rt)
     {
-        Texture2D texture2D = new Texture2D(rt.width, rt.height, TextureFormat.RGBAHalf, false);
+        var texture2D = new Texture2D(rt.width, rt.height, TextureFormat.RGBAHalf, false);
         RenderTexture.active = rt;
         texture2D.ReadPixels(Rect.MinMaxRect(0, 0, rt.width, rt.height), 0, 0);
         RenderTexture.active = null;
@@ -225,7 +217,7 @@ public class Baker : MonoBehaviour
             // 写入变换后的矩阵
             for (var j = 0; j < bonesCount; j++)
             {
-                Matrix4x4 matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
+                var matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
                 //Debug.Log(matrix.ToString());
                 //Matrix4x4 matrix = bones[j].localToWorldMatrix * bindPoses[j];
 

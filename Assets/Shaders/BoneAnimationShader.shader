@@ -10,6 +10,7 @@
 		//_Interval("Interval", Range(0.001, 1)) = 0.03333
 		[KeywordEnum(UV2, UV3, UV4, UV5, UV6, UV7, UV8)]_IndexUV("Bone Index Channel", float) = 0
 		[KeywordEnum(UV2, UV3, UV4, UV5, UV6, UV7, UV8)]_WeightUV("Bone Weight Channel", float) = 1
+		_Offset("Offset", Range(0, 1)) = 0
 	}
 		SubShader
 		{
@@ -64,6 +65,11 @@
 					UNITY_VERTEX_INPUT_INSTANCE_ID
 				};
 
+				UNITY_INSTANCING_BUFFER_START(Props)
+				// 差异化控制
+					UNITY_DEFINE_INSTANCED_PROP(float, _Offset)
+				UNITY_INSTANCING_BUFFER_END(Props)
+
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
 				sampler2D _AnimTex;
@@ -71,6 +77,11 @@
 				float _BoneCount, _FrameCount;
 				//float _Interval;
 				float _FrameRate;
+
+				float random(float2 st)
+				{
+					return frac(sin(dot(st.xy, float2(12.9898,78.233)))*43758.5453123);
+				}
 				
 				// 转换成图片空间下的uv
 				float2 uvConvert(float total)
@@ -109,7 +120,7 @@
 					v2f o;
 					o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 					// 计算y轴坐标（时间）
-					float y = _Time.y * _FrameRate;
+					float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
 					y = floor(y - floor(y / _FrameCount) * _FrameCount);
 
 					// 拿回索引和权重

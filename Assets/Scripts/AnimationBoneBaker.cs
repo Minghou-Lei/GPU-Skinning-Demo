@@ -46,7 +46,7 @@ public class AnimationBoneBaker : MonoBehaviour
         foreach (var clip in clips)
         {
             var frameCount = (int) (clip.length * clip.frameRate);
-          
+
             yield return 0;
 
             var boneTex = CreateBoneTex(animator, skin, clip, mesh, 512, frameCount);
@@ -103,12 +103,12 @@ public class AnimationBoneBaker : MonoBehaviour
         for (var i = 0; i <= animFrameCount; i++)
         {
             clip.SampleAnimation(gameObject, i / clip.frameRate);
-            
+
 
             // 写入变换后的矩阵
             for (var j = 0; j < bonesCount; j++)
             {
-                Matrix4x4 matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
+                var matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
                 //Debug.Log(matrix.ToString());
                 //Matrix4x4 matrix = bones[j].localToWorldMatrix * bindPoses[j];
 
