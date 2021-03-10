@@ -35,9 +35,9 @@ bindPoses[j];
   
 ![spaceTransform](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/imgs/SpaceTransform.jpg)
 
-获得矩阵信息后，将其渲染成Texture2D。为了保持精度，可以通过EncodeFloatRGBA函数将每一个float值转为RGBA空间上的一个点，然后将其逐一渲染到Texture2D上面来,渲染出的图片：
+获得矩阵信息后，将其渲染成Texture2D。为了保持精度，可以通过EncodeFloatRGBA函数将每一个float值转为RGBA空间上的一个点，然后将其逐一渲染到Texture2D上面来,渲染出的图片（部分，原图太大放不下）：
   
-![BoneMatrix2Texture2D](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Ch36_nonPBR%40Dancing%20Running%20Man.Dancing%20Running%20Man.BoneMatrix.jpg "BoneMatrix2Texture2D")
+![BoneMatrix2Texture2D](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/imgs/BoneMatrix2Texture2D.png "BoneMatrix2Texture2D")
   
 每一帧每一块骨骼将会被取样12次，作为12个Pixel储存在材质中。
 
