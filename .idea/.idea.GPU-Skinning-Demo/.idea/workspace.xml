@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="" />
+    <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/imgs/SpaceTransform.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/imgs/SpaceTransform.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +89,7 @@
       <workItem from="1615276953585" duration="50000" />
       <workItem from="1615277071098" duration="650000" />
       <workItem from="1615277826010" duration="19522000" />
-      <workItem from="1615353933158" duration="3312000" />
+      <workItem from="1615353933158" duration="3990000" />
     </task>
     <servers />
   </component>

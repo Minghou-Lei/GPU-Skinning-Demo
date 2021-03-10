@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 779}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 875, y: 779}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 1359, y: 729}
   m_MaxSize: {x: 14002, y: 18063}
   vertical: 0
-  controlID: 113
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 1083, y: 729}
   m_MaxSize: {x: 10001, y: 18063}
   vertical: 1
-  controlID: 114
+  controlID: 18
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 1083, y: 458}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 0
-  controlID: 115
+  controlID: 19
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_MinSize: {x: 882, y: 458}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 116
+  controlID: 20
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -428,8 +428,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -582
     m_HBaseRangeMax: 582
-    m_VBaseRangeMin: -147.5
-    m_VBaseRangeMax: 147.5
+    m_VBaseRangeMin: -158
+    m_VBaseRangeMax: 158
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -446,11 +446,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1164
-      height: 295
+      height: 316
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 582, y: 147.5}
+    m_Translation: {x: 582, y: 158}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -458,9 +458,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -582
-      y: -147.5
+      y: -158
       width: 1164
-      height: 295
+      height: 316
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1164, y: 316}
@@ -842,7 +842,7 @@ MonoBehaviour:
     height: 312
   m_ViewDataDictionary: {fileID: 0}
   m_VertSplit:
-    ID: 85
+    ID: 112
     splitterInitialOffset: 123
     currentActiveSplitter: -1
     realSizes: 6c000000b7000000
@@ -1367,8 +1367,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: 9e3c0000
-    m_LastClickedID: 15518
+    m_SelectedIDs: a23c0000
+    m_LastClickedID: 15522
     m_ExpandedIDs: 00000000963c0000983c00009a3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
