@@ -52,8 +52,37 @@ bindPoses[j];
 var bakedMesh = new Mesh();
 bakedMesh = Instantiate(mesh);
 
-//为新的Mesh的UV2、UV3通道添加骨骼信息和权重信息
+//为新的Mesh的UV2、UV3通道添加骨骼索引信息和权重信息
 MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
 ```
 
 ## 3.将蒙皮所需信息在Shader中合并（代替原来的CPU蒙皮） : [BoneAnimationShader](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/99febe38218011850e97795687cc2c8864aad8d7/Assets/Shaders/BoneAnimationShader.shader)
+  
+在Shader中逐像素解码之前烘焙的BoneMartix材质，获得每帧每骨骼的变换矩阵：
+```cg
+float total = (y * _BoneCount + (int)(index.x)) * 12;
+float4 line0 = readInBoneTex(total);
+float4 line1 = readInBoneTex(total + 4);
+float4 line2 = readInBoneTex(total + 8);
+
+//得到影响该顶点的一号骨骼的Matrix4X4变换矩阵
+float4x4 mat1 = float4x4(line0, line1, line2, float4(0, 0, 0, 1));
+
+total = (y * _BoneCount + (int)(index.y)) * 12;
+line0 = readInBoneTex(total);
+line1 = readInBoneTex(total + 4);
+line2 = readInBoneTex(total + 8);
+
+//得到影响该顶点的二号骨骼的Matrix4X4变换矩阵
+float4x4 mat2 = float4x4(line0, line1, line2, float4(0, 0, 0, 1));
+```
+
+一个顶点受两根骨骼权重的限制，所以对该顶点进行蒙皮运算的代码（Vertex Shader）：
+```cg
+// 拿回索引和权重
+float2 index = v.iuv;
+float2 weight = v.wuv;
+
+//对该顶点进行蒙皮变换
+float4 pos = mul(mat1, v.vertex) * weight.x + mul(mat2, v.vertex) * (1 - weight.x);
+```

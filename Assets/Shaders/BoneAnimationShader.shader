@@ -85,16 +85,21 @@
 				{
 					float2 newUv = uvConvert(total);
 					float2 animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					
 					float r = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 1);
 					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					
 					float g = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 2);
 					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					
 					float b = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 3);
 					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					
 					float a = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
+					
 					return float4(r, g, b, a) * 100 - 50;
 				}
 
@@ -115,13 +120,19 @@
 					float4 line0 = readInBoneTex(total);
 					float4 line1 = readInBoneTex(total + 4);
 					float4 line2 = readInBoneTex(total + 8);
+					
 					float4x4 mat1 = float4x4(line0, line1, line2, float4(0, 0, 0, 1));
+					
 					total = (y * _BoneCount + (int)(index.y)) * 12;
 					line0 = readInBoneTex(total);
 					line1 = readInBoneTex(total + 4);
 					line2 = readInBoneTex(total + 8);
+					
 					float4x4 mat2 = float4x4(line0, line1, line2, float4(0, 0, 0, 1));
+
+					
 					float4 pos = mul(mat1, v.vertex) * weight.x + mul(mat2, v.vertex) * (1 - weight.x);
+					
 					o.vertex = UnityObjectToClipPos(pos);
 					
 					// 法线也如此操作

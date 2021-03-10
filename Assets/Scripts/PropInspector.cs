@@ -12,7 +12,6 @@ public class PropInspector : Editor
         base.OnInspectorGUI();
         Baker baker = target as Baker;
         
-        
         EditorGUILayout.BeginHorizontal();
         baker.Bakemode = (Baker.BAKEMODE) EditorGUILayout.EnumPopup("渲染模式：",baker.Bakemode);
         EditorGUILayout.EndHorizontal();
