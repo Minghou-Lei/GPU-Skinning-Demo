@@ -59,28 +59,60 @@ public class Baker : MonoBehaviour
         var clips = animator.runtimeAnimatorController.animationClips;
         var skin = GetComponentInChildren<SkinnedMeshRenderer>();
         var boneCount = mesh.bindposes.Length;
+        GPUSkinningAnimConfiguration sac = ScriptableObject.CreateInstance<GPUSkinningAnimConfiguration>();
+        sac.boneCount = boneCount;
+        sac.modelName = name;
 
         animator.speed = 1;
         var textWidth = boneCount;
+        List<AnimationInfo> animationInfos = new List<AnimationInfo>();
+        List<Texture2D> textures = new List<Texture2D>();
+        
         foreach (var clip in clips)
         {
+            AnimationInfo animInfo = new AnimationInfo(clip.name, clip.frameRate, clip.length * clip.frameRate);
+            animationInfos.Add(animInfo);
             Debug.Log(clip.name);
-            var frameCount = (int) (clip.length * clip.frameRate);
+            var frameCount = (int)(clip.frameRate * clip.length);
             var boneTex = CreateBoneTex(animator, skin, clip, mesh, 512, frameCount);
-            Debug.Log("BoneCount:" + boneCount + "\tFrameCount:" + frameCount + "\tFrameRate:" + clip.frameRate);
-
+            /*
+            var colors = new Color[boneCount * frameCount * 36];
+            */
             boneTex.name = string.Format("{0}.{1}.BoneMatrix", name, clip.name);
+            textures.Add(boneTex);
             SaveAsJPG(boneTex, Path.Combine("Assets/DemoImgs"), boneTex.name);
             AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets/Matrixs", boneTex.name + ".asset"));
             
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
+        
         var bakedMesh = new Mesh();
         bakedMesh = Instantiate(mesh);
         bakedMesh.name = string.Format("{0}.mesh", name);
         MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
-        AssetDatabase.CreateAsset(bakedMesh, Path.Combine("Assets/BakedMesh", bakedMesh.name + ".mesh"));
+        
+        sac.bakedMesh = bakedMesh;
+        sac.animationInfos = animationInfos.ToArray();
+
+        var combined = combineTextures(textures);
+        
+        AssetDatabase.CreateAsset(bakedMesh, Path.Combine("Assets/BakedMesh", bakedMesh.name+".BakedMesh" + ".mesh"));
+        AssetDatabase.CreateAsset(sac, Path.Combine("Assets/ScriptableObject", name + ".asset"));
+    }
+
+    // 2021年3月11日 - 待完成
+    private Texture2D combineTextures(List<Texture2D> textures)
+    {
+        var height = 0;
+        foreach (var texture in textures)
+        {
+            height += texture.height;
+            
+        }
+        
+        var result = new Texture2D(512, height, TextureFormat.RGBA32, false);
+        
     }
 
     private IEnumerator BakeVertexTexture()
@@ -206,7 +238,6 @@ public class Baker : MonoBehaviour
         result.filterMode = FilterMode.Point;
         result.wrapMode = TextureWrapMode.Clamp;
         var colors = new Color[width * lines * 3];
-        //List<Color> colors = new List<Color>();
         // 逐帧写入矩阵
         for (var i = 0; i <= animFrameCount; i++)
         {
@@ -217,8 +248,6 @@ public class Baker : MonoBehaviour
             for (var j = 0; j < bonesCount; j++)
             {
                 var matrix = transform.worldToLocalMatrix * bones[j].localToWorldMatrix * bindPoses[j];
-                //Debug.Log(matrix.ToString());
-                //Matrix4x4 matrix = bones[j].localToWorldMatrix * bindPoses[j];
 
                 colors[(i * bonesCount + j) * 12 + 0] = EncodeFloatRGBA(matrix.m00);
                 colors[(i * bonesCount + j) * 12 + 1] = EncodeFloatRGBA(matrix.m01);

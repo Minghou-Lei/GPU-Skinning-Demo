@@ -62776,7 +62776,7 @@ MonoBehaviour:
   column: 64
   GPUInstancingMode: 1
   batchSize: 1023
-  bakedMesh: {fileID: 4300000, guid: 966a0014ea3848c4fa7ed7e3c81711d5, type: 2}
+  bakedMesh: {fileID: 4300000, guid: c12217bc85c26aa47ab9aaa3e1bec9c9, type: 2}
   bakedMaterial: {fileID: 2100000, guid: cd69cad582f7e6949875347507c8e598, type: 2}
   materials: []
 --- !u!4 &1713673756
