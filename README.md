@@ -124,5 +124,5 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
   完成后即可在Shader界面中勾选GPU Instancing开启自动实例化
 ## [Manual GPU Instancing](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/Scripts/Spawner.cs#L108)
   
-
+持续补充中······
 
