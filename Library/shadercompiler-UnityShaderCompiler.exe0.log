@@ -1,30 +1,10 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1c1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1c1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: preprocess
-  insize=5304 outsize=687 ok=1
-Cmd: preprocess
-  insize=5387 outsize=687 ok=1
-Cmd: preprocess
-  insize=5485 outsize=687 ok=1
-Cmd: preprocess
-  insize=5448 outsize=686 ok=1
-Cmd: preprocess
-  insize=5329 outsize=687 ok=1
-Cmd: preprocess
-  insize=5331 outsize=687 ok=1
-Cmd: preprocess
-  insize=5466 outsize=687 ok=1
-Cmd: preprocess
-  insize=5543 outsize=686 ok=1
-Cmd: preprocess
-  insize=5558 outsize=687 ok=1
-Cmd: preprocess
-  insize=5560 outsize=687 ok=1
-Cmd: preprocess
-  insize=5566 outsize=685 ok=1
-Cmd: preprocess
-  insize=5558 outsize=687 ok=1
-Cmd: preprocess
-  insize=5565 outsize=687 ok=1
+  insize=5541 outsize=687 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5294 outsize=7190 kw=_WEIGHTUV_UV3 _INDEXUV_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5294 outsize=418 kw=_WEIGHTUV_UV3 _INDEXUV_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 
 Quitting shader compiler process

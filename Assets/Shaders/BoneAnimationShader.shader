@@ -66,7 +66,6 @@
 				};
 
 				UNITY_INSTANCING_BUFFER_START(Props)
-				// 差异化控制
 					UNITY_DEFINE_INSTANCED_PROP(float, _Offset)
 				UNITY_INSTANCING_BUFFER_END(Props)
 

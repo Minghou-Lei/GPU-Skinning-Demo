@@ -1,6 +1,6 @@
 # GPU-Skinning-Demo  
   
-一种利用GPU来实现角色动画效果，减少CPU蒙皮开销的技术实现
+_一种利用GPU来实现角色动画效果，减少CPU蒙皮开销的技术实现_
 - - -
 
   当场景中有很多人物动画模型的时候，性能会产生大量开销，其中很大一部分来自于骨骼动画。GPU Skinning是将CPU中的蒙皮工作转移到GPU中进行，从而能够较大地提升多角色场景的运行效率，在大规模群体动画模拟如MMO、RTS等游戏中有较大的应用性。
@@ -88,4 +88,38 @@ float2 weight = v.wuv;
 //对该顶点进行蒙皮变换
 float4 pos = mul(mat1, v.vertex) * weight.x + mul(mat2, v.vertex) * (1 - weight.x);
 ```
+  
+# GPU Instancing
+_将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利用这些数据绘制多个相同的物体的技术_
+- - -
+有了GPU Skinning技术将CPU中的蒙皮工作转移到GPU中执行后，unity场景的运行效率提高了不少。我们还能通过引入GPU Instancing技术进一步优化。
+  
+现在，每渲染一个人物都需要CPU跟GPU进行一次交流，CPU会告诉GPU人物的Mesh、Material和位置信息，GPU则负责根据指令进行渲染。然而问题显而易见：因为我们在渲染很多个相同的人物，每次CPU告诉GPU的信息很多都是相同的（Mesh & Material），只有位置信息不同。可不可以CPU一次性就告诉GPU所有应该渲染的位置，免去很多无效交流呢？GPU Instancing就应运而生了。它有两种实现方式：
+  
+- ##Auto GPU Instancing
+  在Shader中添加关键字来开启Unity提供的自动GPU Instancing功能：
+  ```cg
+  #pragma multi_compile_instancing
+  ```
+  如果需要在开启了GPU Instancing的Shader中动态调整Properties中的值（如 .SetFloat()），则需要设置缓冲：
+  ```cg
+  Properties
+  {
+    //需要改变的参数
+    _Offset("Offset", Range(0, 1)) = 0
+  }
+  
+  ···
+  //宣告
+  UNITY_INSTANCING_BUFFER_START(Props)
+    UNITY_DEFINE_INSTANCED_PROP(float, _Offset)
+  UNITY_INSTANCING_BUFFER_END(Props)
+  ···
+  
+  //参数的使用
+  float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
+  ```
+  完成后即可在Shader界面中勾选GPU Instancing开启自动实例化
+- ##Manual GPU Instancing
+
 
