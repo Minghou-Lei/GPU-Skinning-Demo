@@ -62774,6 +62774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   row: 32
   column: 32
+  GPUInstancingMode: 1
+  batchSize: 1023
   bakedMesh: {fileID: 4300000, guid: 3657340c2a1121041aea1fb3b9d0a824, type: 2}
   bakedMaterial: {fileID: 2100000, guid: c52521d8efc58d4459114482184d2348, type: 2}
   materials:

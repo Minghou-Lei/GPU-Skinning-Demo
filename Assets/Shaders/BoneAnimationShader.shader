@@ -78,9 +78,10 @@
 				//float _Interval;
 				float _FrameRate;
 
-				float random(float2 st)
+				void Unity_RandomRange_float(float2 Seed, float Min, float Max, out float Out)
 				{
-					return frac(sin(dot(st.xy, float2(12.9898,78.233)))*43758.5453123);
+					float randomno =  frac(sin(dot(Seed, float2(12.9898, 78.233)))*43758.5453);
+					Out = lerp(Min, Max, randomno);
 				}
 				
 				// 转换成图片空间下的uv
@@ -114,13 +115,26 @@
 					return float4(r, g, b, a) * 100 - 50;
 				}
 
-				v2f vert(appdata v)
+				
+
+				v2f vert(appdata v,uint instanceID : SV_InstanceID)
 				{
 					UNITY_SETUP_INSTANCE_ID(v);
 					v2f o;
 					o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 					// 计算y轴坐标（时间）
 					float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
+					
+					#ifdef UNITY_INSTANCING_ENABLED
+					float random;
+					Unity_RandomRange_float(instanceID,0,1,random);
+                    y = _Time.y * _FrameRate + random * _FrameCount;
+					#endif
+/*
+					float random;
+					Unity_RandomRange_float(v.iuv.x*v.wuv.y,0,1,random);
+					float y = _Time.y * _FrameRate + random * _FrameCount;
+*/					
 					y = floor(y - floor(y / _FrameCount) * _FrameCount);
 
 					// 拿回索引和权重

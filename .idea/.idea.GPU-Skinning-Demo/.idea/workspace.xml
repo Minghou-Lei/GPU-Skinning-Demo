@@ -2,132 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/AC/ch36.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/AC/ch36.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Baked/ch36_bone.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Bodymat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Bodymat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Bottommat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Bottommat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Ch36_Body 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Ch36_Body 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Ch36_Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Ch36_Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Guard_03.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Guard_03.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/MAW_MAT.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/MAW_MAT.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Shoesmat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Shoesmat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Topmat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Materials/Topmat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Diffuse 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Diffuse 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Glossiness 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Glossiness 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Glossiness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Glossiness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Normal 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Normal 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Specular 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Specular 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Ch36_1001_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Gloss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Gloss.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Opacity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Opacity.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Body_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Gloss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Gloss.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Opacity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Opacity.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Bottom_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Gloss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Gloss.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Opacity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Opacity.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Shoes_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Gloss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Gloss.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Opacity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Opacity.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Douglas_Top_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/Guard_03__specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_glow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_glow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/MAW_normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/maria_specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Textures/maria_specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1024Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1024Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BakerScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/04/047e97ae90cf14e190738ce092bcceb3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3e/3e56d7c7db3ffdddb49bf6bdaa1ecefb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4a/4a80e448bf3162f054216ced8c437882" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/5047f0a6f935cc308dab27444e7bf5ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/67/67e2256730264fbb324795f6f701449a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6e/6e851565a6672c89b5c663b8b84fa49f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/71/712bd0d3c5a25685c0eccf9aafdb4098" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/81/8199ee3a54e8b1ba53c6e91e14f51e6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/89/89d4617b675815299c27b0d4fefb135d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/93/93b43623ccd761ce4bc40b9e186918f6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9b/9b3894876b6b8d5b35e7e428c1350e6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9b/9bd298a74de79c2cc6d24961317a00f0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b2/b2be40b80065823c15ba14a56916ce57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bc/bc69c149401eee752a51b71c40ef8a63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bd/bd8c28a61963750edc391e3f144d3855" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c7/c7b2864f91931e312d9f153a9a78bb40" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/eb/ebe207e40d3ac22bc79708a3b551e8c0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fa/fac7bb50ba16c4ec1ccb0bb9c5af00d0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fc/fc38c6e975755cd8de490dd93c91a8e5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/00/0067d6ef7125b2a0b7ddddbd9e683fc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/05f24c96e249a9569b85d0b0b51f5c74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/11/1154f99333e35e4da5a0f64c1d368053" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/21/2109830bd5b0b78d714a64c8d614a269" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/26/2609ec7b0c5a910c1650f74905c9b410" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/28/28817c61c7b4b8c0d0fd4932aa15f3f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2e/2e4ac66ac8b3c77b8887318ab7ce4d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/32/3275e54e440e7554eba4a971a2f40354" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/36/36c9c11391a4d9a5113b7a1a26e4b251" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4c/4cdd96c42c9bc73d0d6f4e78cdd28ad1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4e/4e75457f3bc9b2df14fd3a4b3ae652ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4f/4fa9a22610bba46486ac1c90657a7a47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/55/55b5937163e07f37979f3fe52f0cd178" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5c/5cbc8b700c3e7d154c9f2748ef916381" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/68/686883cb7b8a6cca94a65d4fd5718a27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6a/6a2d7f48f3a8dfcd03e6314d74ab210b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6b/6b8e4f601400dab4f034c9119e51e5b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6b/6ba27a5f7180f9afc3011d985909a3f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/70/70da64efbbaf1db0f3fdadc499e9c5f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/73/730191c66e0538ad96d4ff6a2356edbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/79/79d26f0a6d535bfe78bfe8b495a78a66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/85/85bcdd21ea0a0130b1d11ad252f8fb56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8f/8f36306c190de0840a62cab26d0d521a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/94/94b12fe69fd6d50d7ccf483fa4862422" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9e/9e06fdeff522ec88dc5a19b6a39c487e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a7/a7ef114901bb031627fcfcfc031a6e81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ac/ac24ce4c497415a69cc336baf189505d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ae/ae2d5748333bcce32110afbd48424cbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e1/e1cfa07dc8f8d37779883b20ad59d868" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ed/edfa579762ed7d75d438f0da27279c3b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f5/f5b129329d7a315cf1635a50970fb300" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fb/fb44fd2b22492a034218f7b7b2fd58e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fe/fefb86629a89155dc00f856146695b68" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +123,7 @@
       <workItem from="1615277071098" duration="650000" />
       <workItem from="1615277826010" duration="19522000" />
       <workItem from="1615353933158" duration="7471000" />
-      <workItem from="1615364779355" duration="3078000" />
+      <workItem from="1615364779355" duration="6083000" />
     </task>
     <servers />
   </component>

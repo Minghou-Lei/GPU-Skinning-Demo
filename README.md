@@ -88,3 +88,4 @@ float2 weight = v.wuv;
 //对该顶点进行蒙皮变换
 float4 pos = mul(mat1, v.vertex) * weight.x + mul(mat2, v.vertex) * (1 - weight.x);
 ```
+
