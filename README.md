@@ -96,7 +96,7 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
   
 现在，每渲染一个人物都需要CPU跟GPU进行一次交流，CPU会告诉GPU人物的Mesh、Material和位置信息，GPU则负责根据指令进行渲染。然而问题显而易见：因为我们在渲染很多个相同的人物，每次CPU告诉GPU的信息很多都是相同的（Mesh & Material），只有位置信息不同。可不可以CPU一次性就告诉GPU所有应该渲染的位置，免去很多无效交流呢？GPU Instancing就应运而生了。它有两种实现方式：
   
-- ## Auto GPU Instancing
+## Auto GPU Instancing
   在Shader中添加关键字来开启Unity提供的自动GPU Instancing功能：
   ```cg
   #pragma multi_compile_instancing
@@ -120,6 +120,6 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
   float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
   ```
   完成后即可在Shader界面中勾选GPU Instancing开启自动实例化
-- ## Manual GPU Instancing
+## Manual GPU Instancing
 
 
