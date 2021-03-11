@@ -89,6 +89,8 @@ float2 weight = v.wuv;
 float4 pos = mul(mat1, v.vertex) * weight.x + mul(mat2, v.vertex) * (1 - weight.x);
 ```
   
+
+  
 # GPU Instancing
 _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利用这些数据绘制多个相同的物体的技术_
 - - -

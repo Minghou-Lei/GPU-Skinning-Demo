@@ -62776,11 +62776,9 @@ MonoBehaviour:
   column: 64
   GPUInstancingMode: 1
   batchSize: 1023
-  bakedMesh: {fileID: 4300000, guid: 3657340c2a1121041aea1fb3b9d0a824, type: 2}
-  bakedMaterial: {fileID: 2100000, guid: c52521d8efc58d4459114482184d2348, type: 2}
-  materials:
-  - {fileID: 2100000, guid: e4b19659bf5060148b75b67ad9e58372, type: 2}
-  - {fileID: 2100000, guid: c52521d8efc58d4459114482184d2348, type: 2}
+  bakedMesh: {fileID: 4300000, guid: 966a0014ea3848c4fa7ed7e3c81711d5, type: 2}
+  bakedMaterial: {fileID: 2100000, guid: cd69cad582f7e6949875347507c8e598, type: 2}
+  materials: []
 --- !u!4 &1713673756
 Transform:
   m_ObjectHideFlags: 0

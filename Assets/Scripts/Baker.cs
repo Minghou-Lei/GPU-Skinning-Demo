@@ -64,24 +64,23 @@ public class Baker : MonoBehaviour
         var textWidth = boneCount;
         foreach (var clip in clips)
         {
+            Debug.Log(clip.name);
             var frameCount = (int) (clip.length * clip.frameRate);
             var boneTex = CreateBoneTex(animator, skin, clip, mesh, 512, frameCount);
             Debug.Log("BoneCount:" + boneCount + "\tFrameCount:" + frameCount + "\tFrameRate:" + clip.frameRate);
 
             boneTex.name = string.Format("{0}.{1}.BoneMatrix", name, clip.name);
-            SaveAsJPG(boneTex, Path.Combine("Assets"), boneTex.name);
-            AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets", boneTex.name + ".asset"));
-
-
-            var bakedMesh = new Mesh();
-            bakedMesh = Instantiate(mesh);
-            bakedMesh.name = string.Format("{0}.{1}.mesh", name, clip.name);
-            MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
-            AssetDatabase.CreateAsset(bakedMesh, Path.Combine("Assets", bakedMesh.name + ".mesh"));
-
+            SaveAsJPG(boneTex, Path.Combine("Assets/DemoImgs"), boneTex.name);
+            AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets/Matrixs", boneTex.name + ".asset"));
+            
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
+        var bakedMesh = new Mesh();
+        bakedMesh = Instantiate(mesh);
+        bakedMesh.name = string.Format("{0}.mesh", name);
+        MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
+        AssetDatabase.CreateAsset(bakedMesh, Path.Combine("Assets/BakedMesh", bakedMesh.name + ".mesh"));
     }
 
     private IEnumerator BakeVertexTexture()
