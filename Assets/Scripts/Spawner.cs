@@ -16,8 +16,6 @@ public class RenderObjectData
     public Vector3 pos;
     public Vector3 scale;
     public Quaternion rot;
-
-    public MaterialPropertyBlock mpb;
     
     public RenderObjectData(Vector3 pos, Vector3 scale, Quaternion rot)
     {

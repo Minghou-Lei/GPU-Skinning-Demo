@@ -121,8 +121,122 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
   //参数的使用
   float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
   ```
-  完成后即可在Shader界面中勾选GPU Instancing开启自动实例化
+  完成后即可在Shader界面中勾选GPU Instancing开启自动实例化。
+  - 优势：
+    - 使用常用的GameObject + MeshFilter组件 + MeshRenderer组件的形式，较好管理;
+    - 可以单独控制每个人物的 MaterialPropertyBlock ，更改Shader属性很方便;
+    - 代码量少，不易出错；
+  - 劣势：
+    - 基本没有客制化的空间，较不灵活；
+    - 基于组件，造成额外内存开销。
 ## [Manual GPU Instancing](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/Scripts/Spawner.cs#L108)
+  Unity3D可以经由在Update函数中调用 Graphics.DrawMeshInstanced 实现批次渲染。但是首先我们要先维护每一个Batch中渲染的物体：
+```c#
+public class RenderObjectData
+{
+    //显卡需要知道物体在哪渲染
+    public Vector3 pos;
+    public Vector3 scale;
+    public Quaternion rot;
+
+    public RenderObjectData(Vector3 pos, Vector3 scale, Quaternion rot)
+    {
+        this.pos = pos;
+        this.scale = scale;
+        this.rot = rot;
+    }
+
+    //把TRS信息转化为矩阵
+    public Matrix4x4 matrix
+    {
+        get
+        {
+            return Matrix4x4.TRS(pos, rot, scale);
+        }
+        
+        
+    }
+}
+```
+  再维护每一个Batch：
+
+```c#
+public class BatchData
+{
+    //该批次中的所有物体位置
+    public List<RenderObjectData> RenderObjectDatas;
+    //该批次的mpb
+    public MaterialPropertyBlock mpb;
+
+    public BatchData(List<RenderObjectData> renderObjectDatas, MaterialPropertyBlock mpb)
+    {
+        RenderObjectDatas = renderObjectDatas;
+        this.mpb = mpb;
+    }
+}
+```
+  添加所有待渲染的物体，由BatchData进行管理：
+```c#
+int batchIndexNum = 0;
+List<RenderObjectData> currBatch = new List<RenderObjectData>();
+for (int r = 0; r < row; r++)
+{
+    for (int c = 0; c < column; c++)
+    {
+        Vector3 position = new Vector3(r, 0, c);
+        //添加待渲染物体的位置信息
+        RenderObjectData renderObjectData =
+            new RenderObjectData(position, new Vector3(1, 1, 1), Quaternion.identity);
+        //加入本批次
+        currBatch.Add(renderObjectData);
+        ++batchIndexNum;
+        //批次已满后
+        if (batchIndexNum >= batchSize)
+        {
+            //设置mpb
+            MaterialPropertyBlock m = new MaterialPropertyBlock();
+            m.SetFloat("_Offset",Random.Range(0f,1f));
+            //构造为一个Batch
+            BatchData bd = new BatchData(currBatch.GetRange(0, currBatch.Count),
+                m);
+            //添加到所有Batch中
+            batches.Add(bd);
+            currBatch.Clear();
+            batchIndexNum = 0;
+        }
+    }
+}
+//对于批次未满但还需渲染的，再组成一批Batch
+MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+mpb.SetFloat("_Offset",Random.Range(0f,1f));
+BatchData last = new BatchData(currBatch.GetRange(0, currBatch.Count), mpb);
+batches.Add(last);
+currBatch.Clear();
+```
+  最后渲染所有Batch：
+```c#
+private void Update()
+{
+    if(GPUInstancingMode == GPUINSTANCINGMODE.Manual)
+        RenderBatches();
+}
+
+//渲染所有Batch
+void RenderBatches()
+{
+    foreach (var batch in batches)
+    {
+        Graphics.DrawMeshInstanced(bakedMesh,0,bakedMaterial,batch.RenderObjectDatas.Select((a)=>a.matrix).ToList(),batch.mpb );
+    }
+}
+```
+  完成后即可实现手动GPU Instancing。
+  - 优势：
+      - 不会产生GameObject，节省内存空间；
+      - 完全客制化，高阶选手必备；
+  - 劣势：
+      - 代码量大，逻辑较为复杂，容易出错；
+      - 同一批次只能有一个MaterialPropertyBlock,管理不方便；
   
 持续补充中······
 
