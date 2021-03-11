@@ -98,7 +98,7 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
 
 - - -
   
-## Auto GPU Instancing
+## [Auto GPU Instancing](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/Scripts/Spawner.cs#L87)
   在Shader中添加关键字来开启Unity提供的自动GPU Instancing功能：
   ```cg
   #pragma multi_compile_instancing
@@ -122,6 +122,7 @@ _将数据一次性发送给GPU，使用一个绘制函数让渲染流水线利�
   float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
   ```
   完成后即可在Shader界面中勾选GPU Instancing开启自动实例化
-## Manual GPU Instancing
+## [Manual GPU Instancing](https://github.com/Minghou-Lei/GPU-Skinning-Demo/blob/main/Assets/Scripts/Spawner.cs#L108)
+  
 
 
