@@ -68,16 +68,17 @@
 
 				UNITY_INSTANCING_BUFFER_START(Props)
 					UNITY_DEFINE_INSTANCED_PROP(float, _Offset)
+					UNITY_DEFINE_INSTANCED_PROP(float, _Start)
+					UNITY_DEFINE_INSTANCED_PROP(float, _FrameCount)
 				UNITY_INSTANCING_BUFFER_END(Props)
 
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
 				sampler2D _AnimTex,_CurrentAnimTex;
 				float4 _AnimTex_TexelSize;
-				float _BoneCount, _FrameCount;
+				float _BoneCount;
 				//float _Interval;
 				float _FrameRate;
-				int _Start;
 
 				void Unity_RandomRange_float(float2 Seed, float Min, float Max, out float Out)
 				{
@@ -97,19 +98,19 @@
 				float4 readInBoneTex(float total)
 				{
 					float2 newUv = uvConvert(total);
-					float2 animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5 + _Start) * _AnimTex_TexelSize.y);
+					float2 animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5 + UNITY_ACCESS_INSTANCED_PROP(Props, _Start)) * _AnimTex_TexelSize.y);
 					
 					float r = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 1);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ UNITY_ACCESS_INSTANCED_PROP(Props, _Start)) * _AnimTex_TexelSize.y);
 					
 					float g = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 2);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ UNITY_ACCESS_INSTANCED_PROP(Props, _Start)) * _AnimTex_TexelSize.y);
 					
 					float b = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 3);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ UNITY_ACCESS_INSTANCED_PROP(Props, _Start)) * _AnimTex_TexelSize.y);
 					
 					float a = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					
@@ -124,19 +125,19 @@
 					v2f o;
 					o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 					// 计算y轴坐标（时间）
-					float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * _FrameCount;
+					float y = _Time.y * _FrameRate + UNITY_ACCESS_INSTANCED_PROP(Props, _Offset) * UNITY_ACCESS_INSTANCED_PROP(Props, _FrameCount);
 					
 					#ifdef UNITY_INSTANCING_ENABLED
 					float random;
 					Unity_RandomRange_float(instanceID,0,1,random);
-                    y = _Time.y * _FrameRate + random * _FrameCount;
+                    y = _Time.y * _FrameRate + random * UNITY_ACCESS_INSTANCED_PROP(Props, _FrameCount);
 					#endif
 /*
 					float random;
 					Unity_RandomRange_float(v.iuv.x*v.wuv.y,0,1,random);
 					float y = _Time.y * _FrameRate + random * _FrameCount;
 */					
-					y = floor(y - floor(y / _FrameCount) * _FrameCount);
+					y = floor(y - floor(y / UNITY_ACCESS_INSTANCED_PROP(Props, _FrameCount)) * UNITY_ACCESS_INSTANCED_PROP(Props, _FrameCount));
 
 					// 拿回索引和权重
 					float2 index = v.iuv;
