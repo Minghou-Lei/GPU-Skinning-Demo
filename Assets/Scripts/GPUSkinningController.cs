@@ -8,10 +8,10 @@ using Random = UnityEngine.Random;
 public class GPUSkinningController : MonoBehaviour
 {
     public GPUSkinningAnimConfiguration animations;
-    public int activeAnimationIndex = 1;
+    public int activeAnimationIndex = 0;
     public List<AnimationInfo> AnimationInfos;
     public bool isRandom = false;
-    public MeshRenderer mr;
+    private MeshRenderer mr;
 
     private void Awake()
     {
@@ -24,13 +24,13 @@ public class GPUSkinningController : MonoBehaviour
         if (isRandom)
         {
             System.Random random = new System.Random();
-            activeAnimationIndex = Random.Range(0, AnimationInfos.Count - 1);
+            activeAnimationIndex = Random.Range(0, AnimationInfos.Count);
         }
     }
 
     private void Update()
     {
-        AnimationInfo info = animations.animationInfos[activeAnimationIndex-1];
+        AnimationInfo info = animations.animationInfos[activeAnimationIndex];
         MaterialPropertyBlock mpb = new MaterialPropertyBlock();
         mr.GetPropertyBlock(mpb);
         if (isRandom)
