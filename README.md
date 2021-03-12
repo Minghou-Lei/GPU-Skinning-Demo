@@ -155,8 +155,6 @@ public class RenderObjectData
         {
             return Matrix4x4.TRS(pos, rot, scale);
         }
-        
-        
     }
 }
 ```
@@ -228,7 +226,14 @@ void RenderBatches()
 {
     foreach (var batch in batches)
     {
-        Graphics.DrawMeshInstanced(bakedMesh,0,bakedMaterial,batch.RenderObjectDatas.Select((a)=>a.matrix).ToList(),batch.mpb );
+        Graphics.DrawMeshInstanced
+        (
+            bakedMesh,
+            0,
+            bakedMaterial,
+            batch.RenderObjectDatas.Select((a)=>a.matrix).ToList(),
+            batch.mpb
+        );
     }
 }
 ```
