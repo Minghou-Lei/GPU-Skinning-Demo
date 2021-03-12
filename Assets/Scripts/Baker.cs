@@ -70,8 +70,6 @@ public class Baker : MonoBehaviour
         
         foreach (var clip in clips)
         {
-            AnimationInfo animInfo = new AnimationInfo(clip.name, clip.frameRate, clip.length * clip.frameRate);
-            animationInfos.Add(animInfo);
             Debug.Log(clip.name);
             var frameCount = (int)(clip.frameRate * clip.length);
             var boneTex = CreateBoneTex(animator, skin, clip, mesh, 512, frameCount);
@@ -80,8 +78,8 @@ public class Baker : MonoBehaviour
             */
             boneTex.name = string.Format("{0}.{1}.BoneMatrix", name, clip.name);
             textures.Add(boneTex);
-            SaveAsJPG(boneTex, Path.Combine("Assets/DemoImgs"), boneTex.name);
-            AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets/Matrixs", boneTex.name + ".asset"));
+            SaveAsJPG(boneTex, Path.Combine("Assets/BakedDemoImgs"), boneTex.name);
+            AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets/BakedMatrixs", boneTex.name + ".asset"));
             
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
@@ -93,26 +91,46 @@ public class Baker : MonoBehaviour
         MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
         
         sac.bakedMesh = bakedMesh;
+        var start = 0;
+        var height = 0;
+        foreach (var texture in textures)
+        {
+            start = height;
+            height += texture.height;
+            AnimationInfo info = new AnimationInfo(texture.name, start, height-1);
+            animationInfos.Add(info);
+        }
         sac.animationInfos = animationInfos.ToArray();
 
         var combined = combineTextures(textures);
+        combined.name = name;
+        AssetDatabase.CreateAsset(combined, Path.Combine("Assets/BakedMatrixs", combined.name + ".ALL.asset"));
         
         AssetDatabase.CreateAsset(bakedMesh, Path.Combine("Assets/BakedMesh", bakedMesh.name+".BakedMesh" + ".mesh"));
         AssetDatabase.CreateAsset(sac, Path.Combine("Assets/ScriptableObject", name + ".asset"));
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 
     // 2021年3月11日 - 待完成
     private Texture2D combineTextures(List<Texture2D> textures)
     {
         var height = 0;
+        var start = 0;
         foreach (var texture in textures)
         {
+            start = height;
             height += texture.height;
-            
         }
         
         var result = new Texture2D(512, height, TextureFormat.RGBA32, false);
-        
+        height = 0;
+        foreach (var texture in textures)
+        {
+            result.SetPixels(0,height,texture.width,texture.height,texture.GetPixels());
+            height += texture.height;
+        }
+        return result;
     }
 
     private IEnumerator BakeVertexTexture()

@@ -14,13 +14,15 @@ public class GPUSkinningAnimConfiguration : ScriptableObject
 [System.Serializable]
 public class AnimationInfo
 {
+    [HideInInspector]
     public string name;
-    public float frameRate;
-    public float frameCount;
-    public AnimationInfo(string name, float frameRate, float frameCount)
+    public int start;
+    public int end;
+
+    public AnimationInfo(string name, int start, int end)
     {
         this.name = name;
-        this.frameRate = frameRate;
-        this.frameCount = frameCount;
+        this.start = start;
+        this.end = end;
     }
 }

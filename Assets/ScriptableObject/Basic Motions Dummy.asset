@@ -15,19 +15,19 @@ MonoBehaviour:
   modelName: Basic Motions Dummy
   boneCount: 52
   animationInfos:
-  - name: BasicMotions@Idle01 - Idle02
-    frameRate: 30
-    frameCount: 51
-  - name: BasicMotions@Idle01
-    frameRate: 30
-    frameCount: 89.00001
-  - name: BasicMotions@Idle02 - Idle01
-    frameRate: 30
-    frameCount: 51
-  - name: BasicMotions@Idle02
-    frameRate: 30
-    frameCount: 86
-  - name: BasicMotions@Jump01
-    frameRate: 30
-    frameCount: 33
+  - name: Basic Motions Dummy.BasicMotions@Idle01 - Idle02.BoneMatrix
+    start: 0
+    end: 62
+  - name: Basic Motions Dummy.BasicMotions@Idle01.BoneMatrix
+    start: 63
+    end: 171
+  - name: Basic Motions Dummy.BasicMotions@Idle02 - Idle01.BoneMatrix
+    start: 172
+    end: 234
+  - name: Basic Motions Dummy.BasicMotions@Idle02.BoneMatrix
+    start: 235
+    end: 339
+  - name: Basic Motions Dummy.BasicMotions@Jump01.BoneMatrix
+    start: 340
+    end: 380
   bakedMesh: {fileID: 4300000, guid: c12217bc85c26aa47ab9aaa3e1bec9c9, type: 2}
