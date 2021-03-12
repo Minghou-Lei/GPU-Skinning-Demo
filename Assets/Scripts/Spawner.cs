@@ -58,7 +58,6 @@ public class Spawner : MonoBehaviour
     public Material bakedMaterial;
     private MaterialPropertyBlock mpb;
     private GameObject spawn;
-    public List<Material> materials;
     private System.Random random;
     private static List<BatchData> batches = new List<BatchData>();
 
@@ -89,8 +88,7 @@ public class Spawner : MonoBehaviour
             {
                 var rc = Instantiate(spawn);
                 MeshRenderer mr = rc.GetComponent<MeshRenderer>();
-                int i = random.Next(materials.Count);
-                mr.material = materials[i];
+                mr.material = bakedMaterial;
                 
                 rc.transform.parent = transform;
                 rc.transform.position += new Vector3(r, 0, c);

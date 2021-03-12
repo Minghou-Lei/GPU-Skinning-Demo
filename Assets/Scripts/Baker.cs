@@ -67,6 +67,8 @@ public class Baker : MonoBehaviour
         var textWidth = boneCount;
         List<AnimationInfo> animationInfos = new List<AnimationInfo>();
         List<Texture2D> textures = new List<Texture2D>();
+        List<int> frameCounts = new List<int>();
+        List<int> frameRates = new List<int>();
         
         foreach (var clip in clips)
         {
@@ -78,6 +80,8 @@ public class Baker : MonoBehaviour
             */
             boneTex.name = string.Format("{0}.{1}.BoneMatrix", name, clip.name);
             textures.Add(boneTex);
+            frameCounts.Add(frameCount);
+            frameRates.Add((int)clip.frameRate);
             SaveAsJPG(boneTex, Path.Combine("Assets/BakedDemoImgs"), boneTex.name);
             AssetDatabase.CreateAsset(boneTex, Path.Combine("Assets/BakedMatrixs", boneTex.name + ".asset"));
             
@@ -91,6 +95,7 @@ public class Baker : MonoBehaviour
         MappingBoneIndexAndWeightToMeshUV(bakedMesh, UVChannel.UV2, UVChannel.UV3);
         
         sac.bakedMesh = bakedMesh;
+        /*
         var start = 0;
         var height = 0;
         foreach (var texture in textures)
@@ -100,6 +105,18 @@ public class Baker : MonoBehaviour
             AnimationInfo info = new AnimationInfo(texture.name, start, height-1);
             animationInfos.Add(info);
         }
+        */
+        
+        var start = 0;
+        var height = 0;
+        for (int i = 0; i < textures.Count; ++i)
+        {
+            start = height;
+            height += textures[i].height;
+            AnimationInfo info = new AnimationInfo(textures[i].name, start, height-1,frameCounts[i],frameRates[i]);
+            animationInfos.Add(info);
+        }
+        
         sac.animationInfos = animationInfos.ToArray();
 
         var combined = combineTextures(textures);

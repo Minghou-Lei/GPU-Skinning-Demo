@@ -13,6 +13,7 @@
           <e p="AnimationBoneBaker.cs" t="Include" />
           <e p="AnimationTextureBaker.cs" t="Include" />
           <e p="Baker.cs" t="Include" />
+          <e p="GPUSkinningController.cs" t="Include" />
           <e p="PropInspector.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
         </e>

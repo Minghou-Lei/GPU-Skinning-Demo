@@ -18,11 +18,52 @@ public class AnimationInfo
     public string name;
     public int start;
     public int end;
+    public int frameCount;
+    public int frameRate;
 
     public AnimationInfo(string name, int start, int end)
     {
         this.name = name;
         this.start = start;
         this.end = end;
+    }
+
+    public AnimationInfo(string name, int start, int end, int frameCount, int frameRate)
+    {
+        this.name = name;
+        this.start = start;
+        this.end = end;
+        this.frameCount = frameCount;
+        this.frameRate = frameRate;
+    }
+
+    public string Name
+    {
+        get => name;
+        set => name = value;
+    }
+
+    public int Start
+    {
+        get => start;
+        set => start = value;
+    }
+
+    public int End
+    {
+        get => end;
+        set => end = value;
+    }
+
+    public int FrameCount
+    {
+        get => frameCount;
+        set => frameCount = value;
+    }
+
+    public int FrameRate
+    {
+        get => frameRate;
+        set => frameRate = value;
     }
 }

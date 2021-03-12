@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BakerScene.unity
+- path: Assets/Scenes/1024Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

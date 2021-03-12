@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\AnimationBoneBaker.cs" />
      <Compile Include="Assets\Scripts\AnimationTextureBaker.cs" />
      <Compile Include="Assets\Scripts\Baker.cs" />
+     <Compile Include="Assets\Scripts\GPUSkinningController.cs" />
      <Compile Include="Assets\Scripts\PropInspector.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <None Include="Assets\Shaders\VertexAnimationShader.shader" />

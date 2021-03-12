@@ -10,7 +10,8 @@
 		//_Interval("Interval", Range(0.001, 1)) = 0.03333
 		[KeywordEnum(UV2, UV3, UV4, UV5, UV6, UV7, UV8)]_IndexUV("Bone Index Channel", float) = 0
 		[KeywordEnum(UV2, UV3, UV4, UV5, UV6, UV7, UV8)]_WeightUV("Bone Weight Channel", float) = 1
-		_Offset("Offset", Range(0, 1)) = 0
+		_Offset("Offset for Animation Time", Range(0, 1)) = 0
+		_Start("Start for Animation Clips",int) = 0
 	}
 		SubShader
 		{
@@ -71,11 +72,12 @@
 
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
-				sampler2D _AnimTex;
+				sampler2D _AnimTex,_CurrentAnimTex;
 				float4 _AnimTex_TexelSize;
 				float _BoneCount, _FrameCount;
 				//float _Interval;
 				float _FrameRate;
+				int _Start;
 
 				void Unity_RandomRange_float(float2 Seed, float Min, float Max, out float Out)
 				{
@@ -95,19 +97,19 @@
 				float4 readInBoneTex(float total)
 				{
 					float2 newUv = uvConvert(total);
-					float2 animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					float2 animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5 + _Start) * _AnimTex_TexelSize.y);
 					
 					float r = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 1);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
 					
 					float g = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 2);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
 					
 					float b = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					newUv = uvConvert(total + 3);
-					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5) * _AnimTex_TexelSize.y);
+					animUv = float2((newUv.x + 0.5) * _AnimTex_TexelSize.x, (newUv.y + 0.5+ _Start) * _AnimTex_TexelSize.y);
 					
 					float a = DecodeFloatRGBA(tex2Dlod(_AnimTex, float4(animUv, 0, 0)));
 					
