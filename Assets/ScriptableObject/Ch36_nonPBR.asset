@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a81d06b54363744fb72348a62eb41fd, type: 3}
+  m_Name: Ch36_nonPBR
+  m_EditorClassIdentifier: 
+  modelName: Ch36_nonPBR
+  boneCount: 52
+  animationInfos:
+  - name: Ch36_nonPBR.left turn 45.BoneMatrix
+    start: 0
+    end: 48
+    frameCount: 40
+    frameRate: 30
+  - name: Ch36_nonPBR.mixamo.com.BoneMatrix
+    start: 49
+    end: 50
+    frameCount: 1
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant breathing idle.BoneMatrix
+    start: 51
+    end: 198
+    frameCount: 121
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant dying.BoneMatrix
+    start: 199
+    end: 325
+    frameCount: 104
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant flexing muscles.BoneMatrix
+    start: 326
+    end: 495
+    frameCount: 139
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant idle.BoneMatrix
+    start: 496
+    end: 684
+    frameCount: 155
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant jumping.BoneMatrix
+    start: 685
+    end: 788
+    frameCount: 85
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant left turn 45.BoneMatrix
+    start: 789
+    end: 837
+    frameCount: 40
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant right turn 45.BoneMatrix
+    start: 838
+    end: 907
+    frameCount: 57
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant right turn 45(2).BoneMatrix
+    start: 908
+    end: 956
+    frameCount: 40
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant run.BoneMatrix
+    start: 957
+    end: 987
+    frameCount: 25
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant swiping.BoneMatrix
+    start: 988
+    end: 1075
+    frameCount: 72
+    frameRate: 30
+  - name: Ch36_nonPBR.mutant walking.BoneMatrix
+    start: 1076
+    end: 1128
+    frameCount: 43
+    frameRate: 30
+  bakedMesh: {fileID: 4300000, guid: 203bb99d6988e6b498ab3df5747180b1, type: 2}

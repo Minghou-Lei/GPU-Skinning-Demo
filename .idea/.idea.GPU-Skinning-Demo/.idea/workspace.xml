@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="" />
+    <list default="true" id="6d72e93c-d26b-4c57-9f93-3973d9c8ce96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GPU-Skinning-Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/059ee26ee48a4107422d8b93bc43ec52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0f/0f16b83f9fc0206fdde53aa34d1da424" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/17/1795580720380082d8f214194b73e3e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/20/20e9aa27c2c040274d5df76442fcb8b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/35/3597b205cea1c74d8808a946a0752dba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/52/52a757753ef575e08c09ebfb49a6dd4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c2/c2d760a1316651c571e158da585148c1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ee/eec37ab08adf68b78ac8db2f3f7c1640" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fe/feebe6e2dc66a3ee7f3852a086122879" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f640a0-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/614e50-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +51,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SimpleSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Baker.cs" />
       <option value="$PROJECT_DIR$/Assets/ScriptableObject/GPUSkinningAnimConfiguration.cs" />
-      <option value="$PROJECT_DIR$/README.md" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GPUSkinningController.cs" />
       <option value="$PROJECT_DIR$/Assets/Shaders/BoneAnimationShader.shader" />
+      <option value="$PROJECT_DIR$/README.md" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pVn6IlcF7H7y0PuvXd5p1T4J6R" />
@@ -92,7 +109,7 @@
       <workItem from="1615277826010" duration="19522000" />
       <workItem from="1615353933158" duration="7471000" />
       <workItem from="1615364779355" duration="39497000" />
-      <workItem from="1615530892748" duration="3668000" />
+      <workItem from="1615530892748" duration="4543000" />
     </task>
     <servers />
   </component>

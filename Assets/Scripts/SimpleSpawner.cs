@@ -16,7 +16,7 @@ public class SimpleSpawner : MonoBehaviour
             for (int c = 0; c < column; c++)
             {
                 GameObject newGameObject = Instantiate(go);
-                newGameObject.transform.position += new Vector3((float) r, 0, (float) c);
+                newGameObject.transform.position += new Vector3((float) r*0.5f, 0, (float) c*0.5f);
             }
         }
         
