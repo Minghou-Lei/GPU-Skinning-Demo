@@ -240,5 +240,8 @@ void RenderBatches()
       - 代码量大，逻辑较为复杂，容易出错；
       - 同一批次只能有一个MaterialPropertyBlock,管理不方便；
   
+
+## Details
+- 
 持续补充中······
 

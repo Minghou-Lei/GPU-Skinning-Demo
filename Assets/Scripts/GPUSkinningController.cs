@@ -12,19 +12,22 @@ public class GPUSkinningController : MonoBehaviour
     public List<AnimationInfo> AnimationInfos;
     public bool isRandom = false;
     private MeshRenderer mr;
+    private float r,c;
 
     private void Awake()
     {
         AnimationInfos = animations.animationInfos.ToList();
         mr = GetComponent<MeshRenderer>();
+        System.Random random = new System.Random();
+        r = Random.Range(0f, 1f);
+        c = Random.Range(0, AnimationInfos.Count);
     }
 
     private void Start()
     {
         if (isRandom)
         {
-            System.Random random = new System.Random();
-            activeAnimationIndex = Random.Range(0, AnimationInfos.Count);
+            activeAnimationIndex = (int)c;
         }
     }
 
@@ -37,7 +40,7 @@ public class GPUSkinningController : MonoBehaviour
         {
             mpb.SetFloat("_FrameCount",info.frameCount);
             mpb.SetFloat("_Start",info.start);
-            mpb.SetFloat("_Offset",Random.Range(0f,1f));
+            mpb.SetFloat("_Offset",r);
         }
         else
         {
