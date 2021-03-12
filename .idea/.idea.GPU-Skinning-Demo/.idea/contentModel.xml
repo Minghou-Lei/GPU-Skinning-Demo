@@ -4,17 +4,21 @@
     <e p="C:\Users\liminghao\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\liminghao\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_GPU-Skinning-Demo.-1425215754.00" t="ExcludeRecursive" />
     <e p="D:\GPU-Skinning-Demo\GPU-Skinning-Demo" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="AnimationBoneBaker.cs" t="Include" />
+          <e p="AnimationTextureBaker.cs" t="Include" />
+          <e p="Baker.cs" t="Include" />
+          <e p="PropInspector.cs" t="Include" />
+        </e>
         <e p="ScriptableObject" t="Include">
           <e p="GPUSkinningAnimConfiguration.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimationBoneBaker.cs" t="Include" />
-          <e p="AnimationTextureBaker.cs" t="Include" />
-          <e p="Baker.cs" t="Include" />
           <e p="GPUSkinningController.cs" t="Include" />
-          <e p="PropInspector.cs" t="Include" />
+          <e p="SimpleSpawner.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
